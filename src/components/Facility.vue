@@ -15,7 +15,7 @@
 </div>
 
     <div class="card card-compact lg:w-96 bg-base-100 shadow-xl">
-  <figure><img class="h-44 w-full object-cover" src="@/assets/images/rooms.jpg" alt="Shoes" /></figure>
+  <figure><img class="h-44 w-full object-cover" src="@/assets/images/mushalla.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Mushalla</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quod laborum aperiam architecto rem tempora.</p>
@@ -23,7 +23,7 @@
 </div>
 
         <div class="card card-compact lg:w-96 bg-base-100 shadow-xl">
-  <figure><img class="h-44 w-full object-cover" src="@/assets/images/mushalla.jpg" alt="Shoes" /></figure>
+  <figure><img class="h-44 w-full object-cover" src="@/assets/images/rooms.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Ruangan Yang Bersih</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo error aspernatur explicabo commodi doloremque</p>
