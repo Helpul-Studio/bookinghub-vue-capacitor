@@ -4,6 +4,7 @@ import auth from './auth';
 export default createRouter({
     history: createWebHistory(),
     routes : [
+        {path : '/', component: () => import('@/views/Landing.vue')},
         ...auth
     ]
 });
