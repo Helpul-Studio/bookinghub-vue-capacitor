@@ -1,3 +1,20 @@
+<script setup>
+
+import { useAuthStore } from '../../store/auth-store';
+ import { reactive } from 'vue';
+
+ const authStore = useAuthStore();
+
+ const user = reactive({
+    email: '',
+    password: ''
+ });
+
+ const login = () => {
+    authStore.login(user)
+ }
+
+</script>
 <template>
     <div class="min-h-screen bg-base grid place-content-center">
         <div class="card w-96 bg-white dark:bg-slate-800 shadow-xl border">
@@ -6,7 +23,7 @@
                     <router-link to="/"><p class="dark:text-white">Karaoke Hub</p></router-link>
                 </div>
                 <hr class="my-3">
-                <form action="" class="space-y-3">
+                <form @submit.prevent="login" class="space-y-3">
                     <div class="form-control">
                         <label for="email" class="text-gray-800 dark:text-white">Email</label>
                         <input type="text" id="email" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-gray-800 focus:border-2 text-gray-800 dark:bg-slate-800 dark:text-white dark:focus:border-white" placeholder="email@example.com">
