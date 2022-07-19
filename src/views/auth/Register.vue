@@ -9,15 +9,15 @@
                 <form action="#" class="space-y-3">
                     <div class="form-control">
                         <label for="fullname" class="text-gray-800 dark:text-white">Nama</label>
-                    <input type="text" id="email" name="fullname" class="input input-bordered border-gray-500 rounded-2xl focus:border-gray-800 focus:border-2 text-gray-800 dark:bg-slate-800 dark:text-white dark:focus:border-white" placeholder="John Doe">
+                    <input type="text" id="email" name="fullname" class="input input-bordered focus:border-cyan-500" placeholder="John Doe">
                     </div>
                     <div class="form-control">
                         <label for="email" class="text-gray-800 dark:text-white">Email</label>
-                    <input type="email" id="email" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-gray-800 focus:border-2 text-gray-800 dark:bg-slate-800 dark:text-white dark:focus:border-white" placeholder="email@example.com">
+                    <input type="email" id="email" name="email" class="input input-bordered focus:border-cyan-500" placeholder="email@example.com">
                     </div>
                     <div class="form-control">
                         <label for="password" class="text-gray-800 dark:text-white">Kata Sandi</label>
-                    <input type="password" id="password" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-gray-800 focus:border-2 text-gray-800 dark:bg-slate-800 dark:text-white dark:focus:border-white" placeholder="*****">
+                    <input type="password" id="password" name="email" class="input input-bordered focus:border-cyan-500" placeholder="*****">
                     </div>
                     <div class="flex flex-nowrap justify-between">
                         <div>
@@ -28,15 +28,15 @@
                         </div>
                         <div>
                             <label class="label cursor-pointer">
-                                <span class="label-text mr-3 text-gray-800 dark:text-white">Menyetujui <a href="#" class="border-b border-blue-800 text-blue-800 dark:text-amber-500 dark:border-amber-500">aturan</a></span> 
+                                <span class="label-text mr-3 text-gray-800">Menyetujui <a href="#" class="text-cyan-500"> aturan</a></span> 
                                 <input type="checkbox" required checked="checked" class="checkbox checkbox-primary border-gray-800" />
                             </label>
                         </div>
                     </div>
-                    <button class="btn btn-md w-full bg-black hover:bg-gray-800 text-white capitalize text-base dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">Daftar</button>
+                    <button class="btn btn-md w-full border-none bg-cyan-600 hover:bg-cyan-700 text-white capitalize text-base">Daftar</button>
                 </form>
                 <hr class="my-3">
-                <router-link to="/login" class="mt-2 text-sm text-gray-800 text-center dark:text-white">Sudah punya akun? <span class="text-blue-800 dark:text-amber-500">Masuk</span></router-link>
+                <router-link to="/login" class="mt-2 text-sm text-gray-800 text-center dark:text-white">Sudah punya akun? <span class="text-cyan-500">Masuk</span></router-link>
             </div>
         </div>
     </div>
