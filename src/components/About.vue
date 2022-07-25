@@ -12,7 +12,7 @@
         <div class="card bg-base-100">
         <figure><img src="@/assets/images/about.jpg" class="w-full rounded-xl object-cover" /></figure>
         <div class="card-body">
-            <p class="font-extrabold text-2xl text-gray-900">We Serve <a class="text-cyan-500"> The Best </a>For Our Customer</p>
+            <p class="font-extrabold text-xl text-gray-900">"We Serve <a class="text-cyan-500"> The Best </a>For Our Customer"</p>
         </div>
         </div>
           </div>

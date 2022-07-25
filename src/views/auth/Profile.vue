@@ -1,16 +1,7 @@
 <template>
 <div class="min-h-screen relative bg-white">
-    <!-- navbar -->
-    <div class="w-full fixed top-0 bg-white" style="z-index: 999;">
-        <div class="max-w-screen-2xl mx-auto ">  
-            <NavbarSection />
-        </div>
-    </div>
-    <div class="max-w-screen-2xl mx-auto">
-
-<div class="bg-white flex flex-col overflow-hidden m-10 mt-0">
-<div class="m-10" />
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid-flow-col gap-5 p-2">
 
 <div class="form-control">
   <label class="label">
@@ -70,18 +61,18 @@
   </div>
 </div>
 
+<div class="form-control">
 <button type="submit" class="btn btn-md bg-cyan-500 border-none hover:bg-cyan-600 w-6/12"> Ubah Profile  </button>
+</div>
 
 
 </div>
 </div>
 
-
+    <div class="w-full fixed bottom-0 " style="z-index: 999;">
+       <NavigationSection />
     </div>
-    <div class="max-w-screen-2xl mx-auto">
-       <FooterSection />
     </div>
-</div>
 </template>
 <script setup>
 import FooterSection from '@/components/Footer.vue';
@@ -89,4 +80,5 @@ import NavbarSection from '@/components/NavbarAfterLogin.vue';
 import HeroSection from '@/components/Hero.vue';
 import AboutSection from '@/components/About.vue';
 import FacilitySection from '@/components/Facility.vue';
+import NavigationSection from '@/components/Navigation.vue';
 </script>

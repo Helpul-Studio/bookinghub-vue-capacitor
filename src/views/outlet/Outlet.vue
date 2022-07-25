@@ -1,23 +1,13 @@
 <script setup>
 import { DatePicker } from 'v-calendar';
-import FooterSection from '@/components/Footer.vue';
 import NavigationSection from '@/components/Navigation.vue';
-import NavbarSection from '@/components/NavbarAfterLogin.vue';
 </script>
 
 
 <template>
 <div class="min-h-screen relative bg-white">
-    <!-- navbar -->
-    <div class="w-full fixed top-0 bg-white" style="z-index: 999;">
-        <div class="max-w-screen-2xl mx-auto ">  
-            <NavbarSection />
-        </div>
-    </div>
-
-<div class="max-w-screen-2xl mx-auto">
-
-    <div class="p-10" >
+<div class="max-w-max-2xl mx-auto">
+<div>
     <p>
       Silahkan Pilih Tanggal
     </p>
@@ -46,11 +36,11 @@ import NavbarSection from '@/components/NavbarAfterLogin.vue';
       </div>
     </template>
   </DatePicker> 
-  </div>
+</div>
 
-    <div class="grid grid-cols-1 gap-5 p-2">
+  <div class="grid grid-cols-1 gap-5 p-2 mb-20">
 
-<div class="card card-compact w-full bg-base-100 border border-gray-800">
+<div class="card card-compact w-full bg-base-100 border border-neutral">
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
@@ -73,7 +63,7 @@ Pasar Inpres Kebunsayur, Jl. Letjen Suprapto, Marga Sari, Kec. Balikpapan Bar., 
   </div>
 </div>
 
-<div class="card card-compact w-full bg-base-100 border border-gray-800">
+<div class="card card-compact w-full bg-base-100 border border-neutral">
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
@@ -94,7 +84,7 @@ Pasar Inpres Kebunsayur, Jl. Letjen Suprapto, Marga Sari, Kec. Balikpapan Bar., 
   </div>
 </div>
 
-<div class="card card-compact w-full bg-base-100 border border-gray-800">
+<div class="card card-compact w-full bg-base-100 border border-neutral">
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
@@ -121,12 +111,11 @@ Jl. Jenderal Sudirman No.1, Klandasan Ilir, Kecamatan Balikpapan Selatan, Kota B
 
 
 </div>
-
-
     </div>
-    <div class="w-full fixed bottom-0 " style="z-index: 999;">
-       <NavigationSection />
-    </div>
+  
+  <div class="w-full fixed bottom-0 " style="z-index: 999;">
+      <NavigationSection />
+  </div>
 </div>
 </template>
 
