@@ -1,10 +1,8 @@
 <script setup>
 import { DatePicker } from 'v-calendar';
 import FooterSection from '@/components/Footer.vue';
+import NavigationSection from '@/components/Navigation.vue';
 import NavbarSection from '@/components/NavbarAfterLogin.vue';
-import HeroSection from '@/components/Hero.vue';
-import AboutSection from '@/components/About.vue';
-import FacilitySection from '@/components/Facility.vue';
 </script>
 
 
@@ -56,10 +54,10 @@ import FacilitySection from '@/components/Facility.vue';
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
-   <h2 class="font-extrabold text-2xl">Living Plaza</h2>
+   <h2 class="font-extrabold text-2xl">Plaza Kebun Sayur </h2>
     <p class="font-light text-xs">Operasional  : 08:00 - 21:30 </p>
-    <p class="font-light mt-4">
-    Jl. MT Haryono, Gn. Bahagia, Kecamatan Balikpapan Selatan, Kota Balikpapan 76114
+    <p class="font-light mt-4 text-xs">
+Pasar Inpres Kebunsayur, Jl. Letjen Suprapto, Marga Sari, Kec. Balikpapan Bar., Kota Balikpapan, Kalimantan Timur 76132
     </p>
     <div class="pt-12"> 
     <button class="btn btn-sm  btn-success no-animation text-white capitalize font-semibold">Buka</button>
@@ -69,7 +67,7 @@ import FacilitySection from '@/components/Facility.vue';
     </div>
   </div>
  <div>
-     <figure><img class="h-56 w-auto rounded object-cover" src="@/assets/images/outlet/1.jpg" alt="Shoes" /></figure>
+     <figure><img class="h-72 rounded object-cover" src="@/assets/images/outlet/bunsay.jpg" alt="Shoes" /></figure>
  </div>
   </div>
   </div>
@@ -90,7 +88,7 @@ import FacilitySection from '@/components/Facility.vue';
     </div>
   </div>
  <div>
-     <figure><img class="h-56 w-auto rounded object-cover" src="@/assets/images/outlet/1.jpg" alt="Shoes" /></figure>
+     <figure><img class="h-72 rounded object-cover" src="@/assets/images/outlet/living.jpg" alt="Shoes" /></figure>
  </div>
   </div>
   </div>
@@ -100,10 +98,10 @@ import FacilitySection from '@/components/Facility.vue';
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
-   <h2 class="font-extrabold text-2xl">Living Plaza</h2>
+   <h2 class="font-extrabold text-2xl">Plaza Balikpapan</h2>
     <p class="font-light text-xs">Operasional  : 08:00 - 21:30 </p>
     <p class="font-light mt-4">
-    Jl. MT Haryono, Gn. Bahagia, Kecamatan Balikpapan Selatan, Kota Balikpapan 76114
+Jl. Jenderal Sudirman No.1, Klandasan Ilir, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76113
     </p>
     <div class="pt-12">
     <button class="btn btn-sm btn-success no-animation text-white capitalize font-semibold">Buka</button>
@@ -113,7 +111,7 @@ import FacilitySection from '@/components/Facility.vue';
     </div>
   </div>
  <div>
-     <figure><img class="h-56 w-auto rounded object-cover" src="@/assets/images/outlet/1.jpg" alt="Shoes" /></figure>
+     <figure><img class="h-72 rounded object-cover" src="@/assets/images/outlet/plaza.jpg" alt="Shoes" /></figure>
  </div>
   </div>
   </div>
@@ -126,8 +124,8 @@ import FacilitySection from '@/components/Facility.vue';
 
 
     </div>
-    <div class="max-w-screen-2xl mx-auto">
-       <FooterSection />
+    <div class="w-full fixed bottom-0 " style="z-index: 999;">
+       <NavigationSection />
     </div>
 </div>
 </template>
