@@ -26,11 +26,11 @@ import { useAuthStore } from '../../store/auth-store';
                 <form @submit.prevent="login" class="space-y-3">
                     <div class="form-control">
                         <label for="email" class="text-gray-800 dark:text-white">Email</label>
-                        <input type="text" id="email" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-2 text-gray-800 focus:border-cyan-500" placeholder="fujikawachiai@gmail.com">
+                        <input type="text" id="email" v-model="user.email" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-2 text-gray-800 focus:border-cyan-500" placeholder="fujikawachiai@gmail.com">
                     </div>
                     <div class="form-control">
                         <label for="password" class="text-gray-800 dark:text-white">Kata Sandi</label>
-                    <input type="password" id="password" name="email" class="input input-bordered border-gray-500 rounded-2xl focus:border-2 text-gray-800 focus:border-cyan-500" placeholder="*****">
+                    <input type="password" id="password" name="password" v-model="user.password" class="input input-bordered border-gray-500 rounded-2xl focus:border-2 text-gray-800 focus:border-cyan-500" placeholder="*****">
                     </div>
                     <div class="flex flex-nowrap justify-between">
                         <div>

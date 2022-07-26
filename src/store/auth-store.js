@@ -2,7 +2,7 @@ import axios from "axios";
 import { defineStore } from "pinia";
 import router from "../routers/route";
 
-const BASEURL = "http://127.0.0.1:8000/api/";
+const BASEURL = "http://127.0.0.1:8000/api";
 
 export const useAuthStore = defineStore({
 
@@ -19,7 +19,7 @@ export const useAuthStore = defineStore({
 
     actions: {
         login(state){
-            axios.post(`${BASEURL}/login/`, {
+            axios.post(`${BASEURL}/login`, {
              email: state.email, 
              password: state.password   
             })
@@ -39,7 +39,7 @@ export const useAuthStore = defineStore({
         },
 
         register(state){
-            axios.post(`${BASEURL}/register/`, {
+            axios.post(`${BASEURL}/register-user`, {
                 name: state.name,
                 telephone : state.telephone,
                 email : state.email,

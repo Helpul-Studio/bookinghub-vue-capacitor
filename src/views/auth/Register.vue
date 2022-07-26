@@ -1,3 +1,21 @@
+<script setup>
+
+import { useAuthStore } from '../../store/auth-store';
+ import { reactive } from 'vue';
+
+ const authStore = useAuthStore();
+
+ const user = reactive({
+    name: '',
+    email: '',
+    password: ''
+ });
+
+ const register  = () => {
+    authStore.register(user)
+ }
+
+</script>
 <template>
     <div class="min-h-screen bg-base grid py-2 place-content-center">
         <div class="card w-96 bg-white dark:bg-slate-800 border shadow-xl">
@@ -6,18 +24,18 @@
                     <router-link to="/"><p class="dark:text-white">Karaoke Hub</p></router-link>
                 </div>
                 <hr class="my-3">
-                <form action="#" class="space-y-3">
+                <form @submit.prevent="register" class="space-y-3">
                     <div class="form-control">
                         <label for="fullname" class="text-gray-800 dark:text-white">Nama</label>
-                    <input type="text" id="email" name="fullname" class="input input-bordered focus:border-cyan-500" placeholder="John Doe">
+                    <input type="text" v-model="user.name" class="input input-bordered focus:border-cyan-500" placeholder="John Doe">
                     </div>
                     <div class="form-control">
                         <label for="email" class="text-gray-800 dark:text-white">Email</label>
-                    <input type="email" id="email" name="email" class="input input-bordered focus:border-cyan-500" placeholder="email@example.com">
+                    <input type="email" v-model="user.email" class="input input-bordered focus:border-cyan-500" placeholder="email@example.com">
                     </div>
                     <div class="form-control">
                         <label for="password" class="text-gray-800 dark:text-white">Kata Sandi</label>
-                    <input type="password" id="password" name="email" class="input input-bordered focus:border-cyan-500" placeholder="*****">
+                    <input type="password"  v-model="user.password" class="input input-bordered focus:border-cyan-500" placeholder="*****">
                     </div>
                     <div class="flex flex-nowrap justify-between">
                         <div>
