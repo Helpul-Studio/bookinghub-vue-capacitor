@@ -41,9 +41,7 @@ export const useAuthStore = defineStore({
         register(state){
             axios.post(`${BASEURL}/register-user`, {
                 name: state.name,
-                telephone : state.telephone,
                 email : state.email,
-                identity_number : state.identity_number,
                 password : state.password
             }).then(res => {
                 console.log(res.data.message)
@@ -76,7 +74,7 @@ export const useAuthStore = defineStore({
         
         async fetchUsers() {
             try {
-              const data = await axios.get(`${BASEURL}/profile/${this.token}`, {
+              const data = await axios.get(`${BASEURL}/profile`, {
                 headers: {
                         Authorization: `Bearer ${this.token}`
                     }
@@ -90,13 +88,13 @@ export const useAuthStore = defineStore({
         },
 
         updateProfile(state){
-            axios.put(`${BASEURL}/profile-update/${this.token}` , 
+            console.log(state)
+            axios.put(`${BASEURL}/update-profile` , 
             {
                 name : state.name,
-                email : state.email,
-                telephone : state.telephone,
+                email : state.telephone,
                 password : state.password,
-                identity_number : state.identity_number    
+                gender : state.gender,
             }
             ,
             {
