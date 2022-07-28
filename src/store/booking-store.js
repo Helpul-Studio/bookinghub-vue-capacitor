@@ -6,13 +6,13 @@ import { useAuthStore } from "./auth-store";
 const BASEURL = "http://127.0.0.1:8000/api";
 
 export const useBookingStore = defineStore({
-    id: 'booking',
+    id: 'order',
     state: () => ({
-        transaction: []
+        order: []
     }),
 
     getters: {
-        getTransaction: (state) => state.transaction
+        getOrder: (state) => state.order
     },
 
     actions: {
@@ -38,6 +38,22 @@ export const useBookingStore = defineStore({
                 })
             } catch (error) {
                 console.log(error)
+            }
+        },
+
+        async fetchBooking(){
+            try {
+                const authStore = useAuthStore()
+                const token = authStore.getToken
+                
+                const data = await axios.get(`${BASEURL}/checkout-data`, {
+                    headers: { Authorization: `Bearer ${token}`}
+                }).then(result => {
+                    this.order = result.data.data
+                })
+            } catch (error) {
+                alert(error.response.data.message)
+                return error
             }
         },
 

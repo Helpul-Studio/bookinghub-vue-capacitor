@@ -2,21 +2,17 @@
 import { DatePicker } from 'v-calendar';
 import NavigationSection from '@/components/Navigation.vue';
 
-import axios from 'axios';
-import { onBeforeMount } from 'vue';
-import { ref } from 'vue';
+
 import { useOutletStore } from '@/store';
 import { computed } from '@vue/reactivity';
 import { onMounted } from 'vue';
-import { toRaw } from 'vue';
-import { method } from 'lodash';
 import { reactive } from 'vue';
 
 import { useBookingStore } from '../../store/booking-store';
 
 const outletStore = useOutletStore()
-
 const bookingStore = useBookingStore();
+
 
 const outlets = computed(() => outletStore.getOutlet);
 const BASEURL = 'http://localhost:8000'
@@ -28,7 +24,7 @@ function convert(){
 }
 
 
- const booking = reactive({
+ const order = reactive({
     days: new Date()
  });
 
@@ -50,7 +46,7 @@ onMounted(() => {
     <p>
       Silahkan Pilih Tanggal
     </p>
- <DatePicker locale="id" class="inline-block h-full" v-model="booking.days" :min-date='new Date()'>
+ <DatePicker locale="id" class="inline-block h-full" v-model="order.days" :min-date='new Date()'>
     <template v-slot="{ inputValue, togglePopover }">
       <div class="flex items-center">
         <button
@@ -79,7 +75,7 @@ onMounted(() => {
 
   <div class="grid grid-cols-1 gap-5 p-2 mb-20">
 <div class="card card-compact w-full bg-base-100 border border-neutral" v-for="outlet in outlets" :key="outlet.id">
-  <form action="#" @submit.prevent="bookingStore.booking(booking, outlet.id_outlet)">
+  <form action="#" @submit.prevent="bookingStore.booking(order, outlet.id_outlet)">
   <div class="card-body">
   <div class="grid grid-cols-2 place-content-stretch">
   <div class="text-start">
