@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "bookinghub-vue-capacitor",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

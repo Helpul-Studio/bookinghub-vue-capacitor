@@ -7,7 +7,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
     const midtransScriptUrl = 'https://app.sandbox.midtrans.com/snap/snap.js'; 
-    const myMidtransClientKey = 'SB-Mid-client-brLgewo6gUjfn18W'; 
+    const myMidtransClientKey = 'SB-Mid-client-I7rK35u06itpjyf9'; 
 
     let scriptTag = document.createElement('script');
     scriptTag.src = midtransScriptUrl;
