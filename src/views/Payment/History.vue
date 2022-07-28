@@ -46,7 +46,7 @@ function showSnap (token) {
     <div class="card-body">
     <h2 class="card-title text-gray-800  text-sm">Kode Pemesanan #{{ booking.order_id }}</h2>
     <h2 class="place-self-start text-gray-800 text-sm"> {{ booking.days }} </h2>
-    <!-- <p class="place-self-start">Outlet :  Plaza Balikpapan</p> -->
+    <p class="place-self-start">Outlet :  {{ booking.outlet.outlet_name }}</p>
     <p class="place-self-start">Harga :  {{ booking.total_payment }}</p>
   <div class="card-actions justify-start" v-if="booking.status == 'pending'">
       <button class="btn btn-warning btn-sm text-white capitalize no-animation"> Menunggu Pembayaran </button>
