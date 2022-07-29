@@ -1,7 +1,7 @@
 import axios from "axios";
 import { defineStore } from "pinia";
 
-const BASEURL = "https://8310-110-139-151-78.ap.ngrok.io/api";
+const BASEURL = "http://139.59.249.160/api";
 
 export const useOutletStore = defineStore({
     id: 'outlet',
