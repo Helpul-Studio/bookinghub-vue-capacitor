@@ -15,7 +15,7 @@ const bookingStore = useBookingStore();
 
 
 const outlets = computed(() => outletStore.getOutlet);
-const BASEURL = 'http://localhost:8000'
+const BASEURL = 'http://159.89.192.152/'
 
 const date = new Date()
 const hours = new Date().getHours().toString().padStart(2, '0');
@@ -32,7 +32,6 @@ function convert(){
 
 onMounted(() => {
     outletStore.fetchOutlet();
-
 })
 
 
@@ -74,29 +73,29 @@ onMounted(() => {
 </div>
 
   <div class="grid grid-cols-1 gap-5 p-2 mb-20">
-<div class="card card-compact w-full bg-base-100 border border-neutral" v-for="outlet in outlets" :key="outlet.id">
-  <form action="#" @submit.prevent="bookingStore.booking(order, outlet.id_outlet)">
-  <div class="card-body">
-  <div class="grid grid-cols-2 place-content-stretch">
-  <div class="text-start">
-   <h2 class="font-extrabold text-2xl"> {{ outlet.outlet_name  }}</h2>
-    <p class="font-light text-xs">Operasional {{ convert() }} : {{ outlet.opening_hours }} - {{ outlet.closing_hours }} </p>
-    <p class="font-light mt-4 text-xs">
-    </p>
-    <div class="pt-12" v-if='convert() >= outlet.closing_hours'> 
-    
-    <button class="btn btn-sm  btn-error no-animation text-white capitalize font-semibold">Tutup</button>
-    <button class="btn ml-2 btn-sm no-animation text-white capitalize font-semibold">Reservasi</button>
+    <div class="card card-compact w-full bg-base-100 border border-neutral" v-for="outlet in outlets" :key="outlet.id">
+      <form action="#" @submit.prevent="bookingStore.booking(order, outlet.id_outlet)">
+      <div class="card-body">
+      <div class="grid grid-cols-2 place-content-stretch">
+      <div class="text-start">
+      <h2 class="font-extrabold text-2xl"> {{ outlet.outlet_name  }}</h2>
+        <p class="font-light text-xs">Operasional {{ convert() }} : {{ outlet.opening_hours }} - {{ outlet.closing_hours }} </p>
+        <p class="font-light mt-4 text-xs">
+        </p>
+        <div class="pt-12" v-if='convert() >= outlet.closing_hours'> 
+        
+        <button class="btn btn-sm  btn-error no-animation text-white capitalize font-semibold">Tutup</button>
+        <button class="btn ml-2 btn-sm no-animation text-white capitalize font-semibold">Reservasi</button>
+        </div>
+      <div class="pt-12" v-else> 
+        
+        <button class="btn btn-sm  btn-success no-animation text-white capitalize font-semibold">Buka</button>
+        <button type="submit" class="btn ml-2 btn-sm btn-info text-white capitalize font-semibold">Reservasi</button>
+        </div>
+      </div>
+    <div v-for="image in outlet.outlet_image">
+        <figure><img class="h-72 rounded object-cover" :src="`${BASEURL}${image.photo_outlet}`" alt="photo_product"/></figure>
     </div>
-   <div class="pt-12" v-else> 
-    
-    <button class="btn btn-sm  btn-success no-animation text-white capitalize font-semibold">Buka</button>
-    <button type="submit" class="btn ml-2 btn-sm btn-info text-white capitalize font-semibold">Reservasi</button>
-    </div>
-  </div>
- <div v-for="image in outlet.outlet_image">
-     <figure><img class="h-72 rounded object-cover" :src="`${BASEURL}${image.photo_outlet}`" alt="photo_product"/></figure>
- </div>
   </div>
   </div>
   </form>

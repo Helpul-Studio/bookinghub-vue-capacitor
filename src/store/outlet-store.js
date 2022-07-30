@@ -1,7 +1,7 @@
 import axios from "axios";
 import { defineStore } from "pinia";
 
-const BASEURL = "http://139.59.249.160/api";
+const BASEURL = "http://159.89.192.152/api";
 
 export const useOutletStore = defineStore({
     id: 'outlet',
