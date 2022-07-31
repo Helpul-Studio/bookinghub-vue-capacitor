@@ -25,7 +25,7 @@ function convert(){
 
 
  const order = reactive({
-    days: new Date()
+    days: ''
  });
 
 
