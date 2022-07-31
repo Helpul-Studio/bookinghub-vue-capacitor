@@ -84,8 +84,8 @@ onMounted(() => {
         </p>
         <div class="pt-12" v-if='convert() >= outlet.closing_hours'> 
         
-        <button class="btn btn-sm  btn-error no-animation text-white capitalize font-semibold">Tutup</button>
-        <button class="btn ml-2 btn-sm no-animation text-white capitalize font-semibold">Reservasi</button>
+        <button class="btn btn-sm  btn-error no-animation text-white capitalize font-semibold" disabled>Tutup</button>
+        <button class="btn ml-2 btn-sm no-animation text-white capitalize font-semibold" disabled>Reservasi</button>
         </div>
       <div class="pt-12" v-else> 
         

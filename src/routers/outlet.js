@@ -6,5 +6,4 @@ export default [
         requireAuth: true
     }     
     },
-
 ]

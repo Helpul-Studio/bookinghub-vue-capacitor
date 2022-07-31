@@ -14,12 +14,22 @@ import checkIcon from '@/assets/icons/Check.vue';
   <div class="card w-full bg-base-100 shadow-xl">
     <div class="card-body">
     
-    <h2 class="card-title text-success place-self-center text-sm"> Pembelian Berhasil <checkIcon  /> </h2>
+    <h2 class="place-self-center">  <checkIcon /> </h2>
+    <h2 class="card-title text-success place-self-center text-sm"> Berhasil Order </h2>
     <h2 class="text-sm">#ORDER1934993 </h2>
     <h2 class="place-self-start text-gray-800 text-sm">22 Februari 2022 </h2>
     <p class="place-self-start">Outlet :  Plaza Balikpapan</p>
     <p class="place-self-start">Harga :  RP 250.000</p>
     <p class="place-self-start">Metode Pembayaran :  Midtrans</p>
+
+    <div> 
+    <router-link to="/outlet">
+    <button class="btn btn-sm  btn-info no-animation text-white capitalize font-semibold">Reservasi Lagi</button>
+    </router-link>
+    <router-link to="/history">
+    <button class="btn ml-2 btn-sm no-animation btn-success text-white capitalize font-semibold">Lakukan Pembayaran</button>
+    </router-link>
+    </div>
     </div>
   </div> 
 </div>

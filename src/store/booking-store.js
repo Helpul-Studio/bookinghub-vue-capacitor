@@ -34,7 +34,8 @@ export const useBookingStore = defineStore({
                     }
                         
                 }).then(result => {
-                    router.push("/history")
+                    console.log(result)
+                    // router.push("/invoice")
                 })
             } catch (error) {
                 console.log(error)
@@ -56,6 +57,22 @@ export const useBookingStore = defineStore({
                 return error
             }
         },
+
+        async fetchBookingByID(id){
+            try {
+                const authStore = useAuthStore()
+                const token = authStore.getToken
+                
+                const data = await axios.get(`${BASEURL}/checkout/${id}`, {
+                    headers: { Authorization: `Bearer ${token}`}
+                }).then(result => {
+                    this.order = result.data.data
+                })
+            } catch (error) {
+                alert(error.response.data.message)
+                return error
+            }
+        }
 
        
 

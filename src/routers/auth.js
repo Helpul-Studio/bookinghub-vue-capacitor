@@ -17,6 +17,14 @@ export default [
     },
 
     { 
+        path: '/forgot-password', 
+        component: () => import('@/views/auth/Forgot.vue'),    
+        meta: {
+            visitor: true
+        } 
+    },
+
+    { 
         path: '/profile', 
         component: () => import('@/views/auth/Profile.vue'),
         meta: {
