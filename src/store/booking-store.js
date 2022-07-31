@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 import router from "../routers/route";
 import { useAuthStore } from "./auth-store";
 
-const BASEURL = "http://139.59.249.160/api";
+const BASEURL = "http://159.89.192.152/api";
 
 export const useBookingStore = defineStore({
     id: 'order',

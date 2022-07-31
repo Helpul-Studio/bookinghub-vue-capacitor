@@ -2,7 +2,7 @@ import axios from "axios";
 import { defineStore } from "pinia";
 import router from "../routers/route";
 
-const BASEURL = "http://139.59.249.160/api";
+const BASEURL = "http://159.89.192.152/api";
 
 export const useAuthStore = defineStore({
     id: 'auth',
