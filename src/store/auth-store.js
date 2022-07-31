@@ -91,7 +91,7 @@ export const useAuthStore = defineStore({
             axios.put(`${BASEURL}/update-profile` , 
             {
                 name : state.name,
-                email : state.telephone,
+                email : state.email,
                 password : state.password,
                 gender : state.gender,
             }

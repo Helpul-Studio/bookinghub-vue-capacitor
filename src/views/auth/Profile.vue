@@ -59,7 +59,7 @@ const update = () => {
     <span class="label-text">Password (Opsional)</span>
   </label>
   <label class="input-group">
-    <input type="password" class="input input-bordered focus:border-cyan-500 w-full"/>
+    <input type="password" class="input input-bordered focus:border-cyan-500 w-full" v-model="updateUser.password"/>
   </label>
 </div>
 
@@ -68,9 +68,9 @@ const update = () => {
     <span class="label-text">Jenis Kelamin : {{ user.gender }}</span>
   </label>
   <div class="input-group">
-    <select class="select select-bordered focus:border-cyan-500 w-full" v-model="updateUser.email">
-      <option value="pria" v-if="user.gender == 'pria'" selected>Pria</option>
-      <option value="wanita" v-if="user.gender == 'wanita'" selected>Wanita</option>
+    <select class="select select-bordered focus:border-cyan-500 w-full" v-model="updateUser.gender">
+      <option value="pria" selected>Pria</option>
+      <option value="wanita" selected>Wanita</option>
     </select>
   </div>
 </div>
@@ -90,7 +90,7 @@ const update = () => {
 </div> -->
 
 <div class="form-control">
-<button type="submit" class="btn btn-md bg-cyan-500 border-none hover:bg-cyan-600 w-6/12"> Ubah Profile  </button>
+<button type="submit" class="btn btn-md bg-cyan-500 border-none hover:bg-cyan-600 w-6/12 mx-auto mt-2"> Ubah Profile  </button>
 </div>
 </form>
 
