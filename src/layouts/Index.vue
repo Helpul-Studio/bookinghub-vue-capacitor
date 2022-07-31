@@ -12,7 +12,6 @@
 </template>
 <script setup>
 import NavigationSection from '@/components/Navigation.vue';
-import NavbarSection from '@/components/Navbar.vue';
 import HeroSection from '@/components/Hero.vue';
 import AboutSection from '@/components/About.vue';
 import FacilitySection from '@/components/Facility.vue';
