@@ -39,7 +39,8 @@ export const useBookingStore = defineStore({
                     this.orderId = result.data
                     router.push("/invoice")
                 })
-            } catch (error) {
+            } catch (err) {
+                alert(err.response.data.message)
                 console.log(error)
             }
         },
