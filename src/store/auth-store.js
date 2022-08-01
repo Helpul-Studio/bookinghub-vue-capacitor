@@ -104,7 +104,7 @@ export const useAuthStore = defineStore({
             .then(result => {
                 this.fetchUsers();
             }).catch(err => {
-                alert(err.message)
+                alert(err.response.data.message)
                 console.log(err)
             })
         }

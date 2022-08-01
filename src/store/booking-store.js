@@ -36,7 +36,8 @@ export const useBookingStore = defineStore({
                 }).then(result => {
                     router.push("/history")
                 })
-            } catch (error) {
+            } catch (err) {
+                alert(err.response.data.message)
                 console.log(error)
             }
         },
