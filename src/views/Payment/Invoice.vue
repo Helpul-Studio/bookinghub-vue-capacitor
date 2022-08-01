@@ -1,13 +1,20 @@
 <script setup>
 import NavigationSection from '@/components/Navigation.vue';
 import checkIcon from '@/assets/icons/Check.vue';
+import { computed } from 'vue';
+import { useBookingStore } from '../../store';
+
+const bookingStore = useBookingStore()
+
+const orderId = computed(() => bookingStore.getOrderId)
+
 </script>
 
 <template>
 <div class="min-h-screen relative bg-white">
 <div class="max-w-screen-2xl mx-auto">
 
-    <div class="grid grid-cols-1 gap-5 p-2">
+    <div class="grid grid-cols-1 gap-5 p-2 my-auto">
 
 
 
@@ -16,11 +23,7 @@ import checkIcon from '@/assets/icons/Check.vue';
     
     <h2 class="place-self-center">  <checkIcon /> </h2>
     <h2 class="card-title text-success place-self-center text-sm"> Berhasil Order </h2>
-    <h2 class="text-sm">#ORDER1934993 </h2>
-    <h2 class="place-self-start text-gray-800 text-sm">22 Februari 2022 </h2>
-    <p class="place-self-start">Outlet :  Plaza Balikpapan</p>
-    <p class="place-self-start">Harga :  RP 250.000</p>
-    <p class="place-self-start">Metode Pembayaran :  Midtrans</p>
+    <h2 class="text-sm">Nomor Order : #{{orderId}} </h2>
 
     <div> 
     <router-link to="/outlet">

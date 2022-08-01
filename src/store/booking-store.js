@@ -8,11 +8,13 @@ const BASEURL = "http://159.89.192.152/api";
 export const useBookingStore = defineStore({
     id: 'order',
     state: () => ({
-        order: []
+        order: [],
+        orderId : ''
     }),
 
     getters: {
-        getOrder: (state) => state.order
+        getOrder: (state) => state.order,
+        getOrderId : (state) => state.orderId
     },
 
     actions: {
@@ -34,8 +36,8 @@ export const useBookingStore = defineStore({
                     }
                         
                 }).then(result => {
-                    console.log(result)
-                    // router.push("/invoice")
+                    this.orderId = result.data
+                    router.push("/invoice")
                 })
             } catch (error) {
                 console.log(error)

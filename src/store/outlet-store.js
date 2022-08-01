@@ -6,7 +6,8 @@ const BASEURL = "http://159.89.192.152/api";
 export const useOutletStore = defineStore({
     id: 'outlet',
     state: () => ({
-        outlet: []
+        outlet: [],
+        
     }),
 
     getters: {
