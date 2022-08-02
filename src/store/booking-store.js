@@ -41,7 +41,7 @@ export const useBookingStore = defineStore({
                 })
             } catch (err) {
                 alert(err.response.data.message)
-                console.log(error)
+                console.log(err)
             }
         },
 
