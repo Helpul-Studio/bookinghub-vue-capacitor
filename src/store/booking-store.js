@@ -37,6 +37,7 @@ export const useBookingStore = defineStore({
                         
                 }).then(result => {
                     this.orderId = result.data
+                    console.log(this.orderId)
                     router.push("/invoice")
                 })
             } catch (err) {

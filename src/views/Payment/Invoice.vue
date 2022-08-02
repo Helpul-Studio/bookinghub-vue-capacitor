@@ -23,7 +23,7 @@ const orderId = computed(() => bookingStore.getOrderId)
     
     <h2 class="place-self-center">  <checkIcon /> </h2>
     <h2 class="card-title text-success place-self-center text-sm"> Berhasil Order </h2>
-    <h2 class="text-sm">Nomor Order : #{{orderId}} </h2>
+    <h2 class="text-sm">Nomor Order : #{{orderId.data}} </h2>
 
     <div> 
     <router-link to="/outlet">

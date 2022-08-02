@@ -1,6 +1,6 @@
 {
-	"appId": "com.example.myapp",
-	"appName": "myApp",
+	"appId": "com.example.bookinghub",
+	"appName": "Booking hub",
 	"webDir": "dist",
 	"bundledWebRuntime": false
 }

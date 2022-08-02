@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.example.bookinghub;
 
 import com.getcapacitor.BridgeActivity;
 
